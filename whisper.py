@@ -63,7 +63,8 @@ def handleAudio(audioName, outputFolder):
 
 
 def long_running_task(inputFolder, outputFolder):
-    audio_files = [os.path.join(inputFolder, f) for f in os.listdir(inputFolder) if f.endswith('.m4a')]
+    # audio_files = [os.path.join(inputFolder, f) for f in os.listdir(inputFolder) if f.endswith('.m4a')]
+    audio_files = [os.path.join(inputFolder, f) for f in os.listdir(inputFolder) if True]
     print(audio_files)
     for audio_file in audio_files:
         handleAudio(audio_file, outputFolder)
